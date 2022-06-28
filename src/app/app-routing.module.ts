@@ -1,5 +1,4 @@
 import { BuglistComponent } from './subcomponents/buglist/buglist.component';
-import { CreateIssueComponent } from './subcomponents/create-issue/create-issue.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BugListPageComponent } from './components/bug-list-page/bug-list-page.component';
