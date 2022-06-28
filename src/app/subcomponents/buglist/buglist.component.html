@@ -1,0 +1,18 @@
+<div class="col">
+  <table class="w-100">
+    <tr class="bg-primary">
+      <th>Type</th>
+      <th>Key</th>
+      <th>Summary</th>
+      <th>Assignee</th>
+      <th>Reporter</th>
+    </tr>
+    <tr *ngFor="let bug of bugList; let i = index">
+      <td>{{ bug.type }}</td>
+      <td>{{ i }}</td>
+      <td>{{ bug.summary }}</td>
+      <td>{{ bug.assignee }}</td>
+      <td>{{ bug.reporter }}</td>
+    </tr>
+  </table>
+</div>

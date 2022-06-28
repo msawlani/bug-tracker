@@ -1,0 +1,103 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create Issue</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form #f="ngForm">
+      <div>
+        <Label for="Project">Project</Label>
+        <div class="input-class">
+          <select id="project" class="form-control" name="project" ngModel>
+            <option value="bugTracker">Bug Tracker</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="issue">Type of Issue</label>
+        <div class="input-group">
+          <select id="issue" class="form-control" name="type" ngModel>
+            <option value="Bug">Bug</option>
+            <option value="Task">Task</option>
+            <option value="Feature">Feature</option>
+            <option value="Improvement">Improvement</option>
+            <option value="Epic">Epic</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="reporter">Reporter</label>
+        <div>
+          <input
+            id="reporter"
+            class="form-control"
+            name="reporter"
+            placeholder="who reported it?"
+            ngModel
+          />
+        </div>
+      </div>
+      <div>
+        <label for="priority">Priority</label>
+        <div class="input-group">
+          <select id="priority" class="form-control" name="priority" ngModel>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <div>
+          <label for="date">Due Date</label>
+          <input type="date" class="form-control" />
+        </div>
+      </div>
+      <div>
+        <label for="summary">Summary</label>
+        <div>
+          <input
+            placeholder="reason"
+            name="summary"
+            id="summary"
+            class="form-control"
+            required
+            ngModel
+          />
+        </div>
+      </div>
+      <div>
+        <label for="description">Summary</label>
+        <div>
+          <textarea
+            placeholder="Add Description"
+            name="description"
+            id="description"
+            class="form-control"
+            required
+            ngModel
+          ></textarea>
+        </div>
+      </div>
+      <app-file-upload [progress]="progress"></app-file-upload>
+    </form>
+    <button
+      type="button"
+      (click)="handleSubmit(f)"
+      class="btn btn-outline-dark mt-4"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="openModel(content)">
+  Create
+</button>

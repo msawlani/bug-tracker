@@ -1,0 +1,9 @@
+<div>
+  <span>Choose File</span>
+  <a href="{{ file?.name }}" download>{{
+    file ? file.name : "or drag and drop file here"
+  }}</a>
+  <input class="file-input" type="file" ngModel />
+</div>
+
+<!-- <app-progress [progress]="progress"></app-progress> -->
