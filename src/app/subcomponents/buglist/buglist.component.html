@@ -1,18 +1,22 @@
-<div class="col">
-  <table class="w-100">
-    <tr class="bg-primary">
-      <th>Type</th>
-      <th>Key</th>
-      <th>Summary</th>
-      <th>Assignee</th>
-      <th>Reporter</th>
-    </tr>
-    <tr *ngFor="let bug of bugList; let i = index">
-      <td>{{ bug.type }}</td>
-      <td>{{ i }}</td>
-      <td>{{ bug.summary }}</td>
-      <td>{{ bug.assignee }}</td>
-      <td>{{ bug.reporter }}</td>
-    </tr>
+<div class="col mx-3">
+  <table class="table table-bordered table-dark w-100">
+    <thead class="">
+      <tr>
+        <th scope="col">Key</th>
+        <th scope="col">Type</th>
+        <th scope="col">Summary</th>
+        <th scope="col">Assignee</th>
+        <th scope="col">Reporter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bug of bugList; let i = index">
+        <th scope="row">{{ i }}</th>
+        <td>{{ bug.type }}</td>
+        <td>{{ bug.summary }}</td>
+        <td>{{ bug.assignee }}</td>
+        <td>{{ bug.reporter }}</td>
+      </tr>
+    </tbody>
   </table>
 </div>
