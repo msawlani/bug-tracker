@@ -7,12 +7,18 @@ import { BehaviorSubject } from 'rxjs';
 export class BugService {
   private bugList = new BehaviorSubject<
     Array<{
+      project: string;
       type: string;
       assignee: string;
       reporter: string;
+      state: string;
+      priority: string;
       summary: string;
+      description: string;
+      date: string;
     }>
   >([]);
+
   bug = this.bugList.asObservable();
 
   constructor() {}

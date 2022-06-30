@@ -10,10 +10,15 @@ import { BugService } from 'src/app/service/bug.service';
 })
 export class CreateIssueComponent implements OnInit {
   bugList: Array<{
+    project: string;
     type: string;
     assignee: string;
     reporter: string;
+    state: string;
+    priority: string;
     summary: string;
+    description: string;
+    date: string;
   }> = [];
 
   parentList = [];

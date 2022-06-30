@@ -30,7 +30,18 @@
           </select>
         </div>
       </div>
-
+      <div>
+        <label for="assignee">Assignee</label>
+        <div>
+          <input
+            id="assignee"
+            class="form-control"
+            name="assignee"
+            placeholder="Who is this assigned to?"
+            ngModel
+          />
+        </div>
+      </div>
       <div>
         <label for="reporter">Reporter</label>
         <div>
@@ -41,6 +52,18 @@
             placeholder="who reported it?"
             ngModel
           />
+        </div>
+      </div>
+      <div>
+        <label for="state">State</label>
+        <div class="input-group">
+          <select id="state" class="form-control" name="state" ngModel>
+            <option value="To Do">To Do</option>
+            <option value="Done">Done</option>
+            <option value="WIP Testing">WIP Testing</option>
+            <option value="Blocking/waiting">Blocking/waiting</option>
+            <option value="In Progress">In Progress</option>
+          </select>
         </div>
       </div>
       <div>
@@ -57,7 +80,7 @@
       <div>
         <div>
           <label for="date">Due Date</label>
-          <input type="date" class="form-control" />
+          <input type="date" class="form-control" ngModel />
         </div>
       </div>
       <div>
@@ -74,7 +97,7 @@
         </div>
       </div>
       <div>
-        <label for="description">Summary</label>
+        <label for="description">Description</label>
         <div>
           <textarea
             placeholder="Add Description"

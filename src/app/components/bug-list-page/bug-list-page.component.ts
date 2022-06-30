@@ -9,10 +9,15 @@ import { NgForm } from '@angular/forms';
 })
 export class BugListPageComponent implements OnInit {
   bugList: Array<{
+    project: string;
     type: string;
     assignee: string;
     reporter: string;
+    state: string;
+    priority: string;
     summary: string;
+    description: string;
+    date: string;
   }> = [];
 
   parentList = [];

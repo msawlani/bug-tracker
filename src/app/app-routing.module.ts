@@ -14,6 +14,7 @@ const routes: Routes = [
     path: 'bug-list',
     component: BugListPageComponent,
     children: [
+      { path: '', redirectTo: 'bug-list', pathMatch: 'full' },
       { path: 'bug-list', component: BuglistComponent },
       { path: 'settings', component: SettingsComponent },
     ],
