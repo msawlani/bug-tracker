@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'bug-list',
     component: BugListPageComponent,
     children: [
-      { path: '', component: BuglistComponent },
+      { path: 'bug-list', component: BuglistComponent },
       { path: 'settings', component: SettingsComponent },
     ],
   },
