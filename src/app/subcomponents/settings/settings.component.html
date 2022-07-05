@@ -1,2 +1,42 @@
-<p>settings works!</p>
+<form #f="ngForm">
+  <label for="Name">Name</label>
+  <input id="Name" name="Name" class="form-control" ngModel required />
+  <label for="Key">Key</label>
+  <input id="Key" name="Key" class="form-control" ngModel required />
+  <label for="URL">URL</label>
+  <input id="URL" name="URL" class="form-control" ngModel />
+  <label for="Project Type">Project Type</label>
+  <input
+    id="Project Type"
+    class="form-control"
+    name="Project Type"
+    ngModel
+    disabled
+  />
+  <label for="Project category">Project category</label>
+  <input
+    id="Project category"
+    class="form-control"
+    name="Project category"
+    ngModel
+    disabled
+  />
+  <label for="Avatar">Avatar</label>
+  <button class="form-control">Select Image</button>
+  <label for="Description"> Description</label>
+  <textarea id="description" class="form-control"></textarea>
+  <label for="project lead">Project Lead</label>
+  <input
+    id="project lead"
+    name="project lead"
+    class="form-control"
+    ngModel
+    required
+  />
+  <label for="default assignee">Default Assignee</label>
+  <select name="default assignee" id="default assignee" class="form-control">
+    <option value="Project Lead">Project Lead</option>
+    <option value="Unassigned">Unassigned</option>
+  </select>
+</form>
 <router-outlet></router-outlet>
