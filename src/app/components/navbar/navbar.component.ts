@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FilterBugsPipe } from 'src/app/pipes/filter-bugs.pipe';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +7,7 @@ import { FilterBugsPipe } from 'src/app/pipes/filter-bugs.pipe';
 })
 export class NavbarComponent implements OnInit {
   filterBugs: string = '';
-  constructor(private pip: FilterBugsPipe) {}
+  constructor() {}
 
   ngOnInit(): void {}
 }
