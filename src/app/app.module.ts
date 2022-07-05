@@ -16,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectNavBarComponent } from './components/project-nav-bar/project-nav-bar.component';
 import { SettingsComponent } from './subcomponents/settings/settings.component';
 import { BuglistComponent } from './subcomponents/buglist/buglist.component';
+import { FilterBugsPipe } from './pipes/filter-bugs.pipe';
+import { FilterBugsByNamePipe } from './pipes/filter-bugs-by-name.pipe';
+import { FilterBugsByStatePipe } from './pipes/filter-bugs-by-state.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { BuglistComponent } from './subcomponents/buglist/buglist.component';
     ProjectNavBarComponent,
     SettingsComponent,
     BuglistComponent,
+    FilterBugsPipe,
+    FilterBugsByNamePipe,
+    FilterBugsByStatePipe,
   ],
   imports: [
     BrowserModule,

@@ -4,8 +4,8 @@
       <h5>Assigned to me</h5>
       <div>
         <div>
-          <ul *ngFor="let bug of bugList; let i = index">
-            <li>{{ bug.type }}</li>
+          <ul *ngFor="let bug of bugList | filterBugsByName; let i = index">
+            <li>{{ bug.summary }}</li>
           </ul>
         </div>
       </div>
@@ -15,7 +15,9 @@
     <div>
       <h5>Open tasks</h5>
       <div>
-        <div></div>
+        <ul *ngFor="let bug of bugList | filterBugsByState; let i = index">
+          <li>{{ bug.summary }}</li>
+        </ul>
       </div>
     </div>
   </div>

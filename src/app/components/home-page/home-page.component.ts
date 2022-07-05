@@ -9,6 +9,7 @@ import { BugService } from 'src/app/service/bug.service';
 })
 export class HomePageComponent implements OnInit {
   bugList: any;
+  filterBugs: any;
 
   constructor(private httpClient: HttpClient, private bug: BugService) {}
 
