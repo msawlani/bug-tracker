@@ -9,19 +9,8 @@ import { BugService } from 'src/app/service/bug.service';
   styleUrls: ['./create-issue.component.scss'],
 })
 export class CreateIssueComponent implements OnInit {
-  bugList: Array<{
-    project: string;
-    type: string;
-    assignee: string;
-    reporter: string;
-    state: string;
-    priority: string;
-    summary: string;
-    description: string;
-    date: string;
-  }> = [];
-
-  parentList = [];
+  newBug: any;
+  readonly url = 'http://localhost:5000';
 
   progress: any;
 
@@ -32,11 +21,9 @@ export class CreateIssueComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
+  // handles on submit in form and then posts the new bug to the backend
   handleSubmit(f: NgForm) {
-    this.bugList.push(f.value);
-    this.bug.addToList(this.bugList);
-    this.modalService.dismissAll();
-    console.log(f.value);
+    this.bug.createBug(f.value).subscribe((data) => console.log(data));
+    window.location.reload();
   }
 }

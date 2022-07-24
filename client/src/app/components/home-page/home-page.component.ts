@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { BugService } from 'src/app/service/bug.service';
 
@@ -11,9 +10,9 @@ export class HomePageComponent implements OnInit {
   bugList: any;
   filterBugs: any;
 
-  constructor(private httpClient: HttpClient, private bug: BugService) {}
+  constructor(private Bug: BugService) {}
 
   ngOnInit() {
-    this.bug.bug.subscribe((bug) => (this.bugList = bug));
+    this.Bug.getBugs().subscribe((data) => (this.bugList = data));
   }
 }

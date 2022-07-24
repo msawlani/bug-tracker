@@ -12,6 +12,6 @@ export class BuglistComponent implements OnInit {
   constructor(private bug: BugService) {}
 
   ngOnInit() {
-    this.bug.bug.subscribe((bug) => (this.bugList = bug));
+    this.bug.getBugs().subscribe((data) => (this.bugList = data));
   }
 }
